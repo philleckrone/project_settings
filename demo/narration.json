@@ -1,0 +1,146 @@
+{
+  "cues": "{1} before a phrase shows box 1 of the step from there on, {0,2} boxes 0 and 2, {} none; the pointer goes on the first box named. Cues are not spoken or shown. 'q' is the step's question in the YouTube timecodes (youtubetext.txt).",
+  "youtube": {
+    "en": {
+      "about": "Project Settings Report is a Paratext tool that shows all of a project's settings on one page in your web browser, each with a description in plain words. It also reads the language settings, and counts how often each approved character and punctuation mark occurs in the text, so you can see what is approved but never used, and what is disapproved but still in the text. It also shows the quotation marks, the number and Scripture reference settings, and the settings of the inventories. The report only shows the settings; you change them in Paratext.",
+      "download": "Download Install_Phils_tools.exe from the Paratext Plugins folder, and tick Project Settings Report in it:",
+      "link": "https://short.do/HgUb7T",
+      "credits": [
+        "Created with Claude AI.",
+        "Narration: AI-generated voice (Microsoft Azure AI Speech, voice \"Jenny\").",
+        "Music from Free To Use",
+        "Source: https://freetouse.com/music",
+        "Coconut Kind of Love by Aetheric"
+      ]
+    }
+  },
+  "steps": [
+    {
+      "id": "title",
+      "en": {
+        "title": "Project Settings Report",
+        "sub": "A Paratext tool: all of a project's settings on one page",
+        "text": "Project Settings Report is a Paratext tool. It shows all the settings of a project on one page, each with a description in plain words."
+      }
+    },
+    {
+      "id": "s00_menu",
+      "en": {
+        "title": "Open it from the Tools menu",
+        "q": "How do I open Project Settings Report?",
+        "text": "In Paratext, open the project. Then choose {0}Tools, then {1}Project Settings Report."
+      }
+    },
+    {
+      "id": "s01_report",
+      "en": {
+        "title": "The report opens in your browser",
+        "q": "What is at the top of the report?",
+        "text": "The report opens in your web browser. {0}At the top are the project, its Settings.xml file, and how many books were read. {1}The report only shows the settings. To change them, use Paratext. {2}The contents list takes you to each group of settings."
+      }
+    },
+    {
+      "id": "s02_rows",
+      "en": {
+        "title": "Name, value and description",
+        "q": "What does each row show?",
+        "text": "Each row gives {0}the name of the setting in Settings.xml, {1}its value, {2}and what it means, with the place in Paratext where it is set. {3}Where it helps, the value is shown in a readable form, with the stored text below it."
+      }
+    },
+    {
+      "id": "s03_empty",
+      "en": {
+        "title": "Show the empty settings",
+        "q": "Where are the settings that have no value?",
+        "text": "Settings with no value are hidden. {0}To see them too, tick Show empty settings. {1}The contents then show how many empty settings each group has."
+      }
+    },
+    {
+      "id": "s04_yellow",
+      "en": {
+        "title": "Empty settings are yellow",
+        "q": "What do the yellow names mean?",
+        "text": "{0,1}The names of empty settings are yellow, so you can tell them apart."
+      }
+    },
+    {
+      "id": "s05_language",
+      "en": {
+        "title": "The language settings",
+        "q": "Does the report show the language settings?",
+        "text": "{0}The report also reads the project's language settings file, here es.ldml. {1}It shows the letters and punctuation listed there, and further down, the quotation marks, fonts and keyboard."
+      }
+    },
+    {
+      "id": "s06_chars",
+      "en": {
+        "title": "Characters counted in the text",
+        "q": "How often is each character used?",
+        "text": "The report reads the text of every book. {0}For each approved character, it shows how often it occurs. {1}Approved characters that the text never uses are listed below."
+      }
+    },
+    {
+      "id": "s07_invalid",
+      "en": {
+        "title": "Disapproved characters still in the text",
+        "q": "Which disapproved characters are still in the text?",
+        "text": "{0}Disapproved characters that still occur in the text are listed in orange, with their counts. {1,2}Characters that look alike, such as dashes and quotation marks, show their Unicode value under them. Punctuation is shown the same way."
+      }
+    },
+    {
+      "id": "s08_books",
+      "en": {
+        "title": "Books and project files",
+        "q": "Which books and files does the project have?",
+        "text": "{0}You also see the books in the project, and whether any book from Genesis to Revelation is missing. {1}And you see whether the project has a custom.vrs file, and further up, custom.sty and autocorrect.txt."
+      }
+    },
+    {
+      "id": "s08b_quotes",
+      "en": {
+        "title": "Quotation marks",
+        "q": "Does the report show the quotation marks?",
+        "text": "{0}The report also shows the quotation marks of each level, {1}and the marks that continue a quotation in a new paragraph."
+      }
+    },
+    {
+      "id": "s08c_more",
+      "en": {
+        "title": "Inventories, numbers and references",
+        "q": "What other settings does the report show?",
+        "text": "The contents take you to the other groups: {0,1}the settings of the inventories, such as capitalization, markers and repeated words, {2}the number settings, {3}and how Scripture references are written."
+      }
+    },
+    {
+      "id": "s09_saved",
+      "en": {
+        "title": "Saved in the project's local folder",
+        "q": "Where is the report saved?",
+        "text": "The tool saves the report automatically {0}in the project's folder, {1}in local, ProjectSettings. {2,3}The file is SettingsReport.html. It is replaced each time you run the tool. The local folder is not sent with Send/Receive, so the report stays on your computer."
+      }
+    },
+    {
+      "id": "sec_install",
+      "en": {
+        "title": "Installing the tool",
+        "q": "How do I install the tool?",
+        "text": "Installing the tool."
+      }
+    },
+    {
+      "id": "i7_ready",
+      "en": {
+        "title": "Ready to use",
+        "text": "Start Paratext again. {1,0}Project Settings Report is now on the Tools menu."
+      }
+    },
+    {
+      "id": "end",
+      "en": {
+        "title": "Project Settings Report",
+        "sub": "Every setting on one page  ·  Plain descriptions  ·  Characters counted in the text",
+        "text": "Project Settings Report shows all of a project's settings on one page, with plain descriptions, and counts the characters used in the text. After you change a setting, choose it again to see a new report."
+      }
+    }
+  ]
+}

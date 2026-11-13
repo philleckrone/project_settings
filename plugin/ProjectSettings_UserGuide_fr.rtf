@@ -1,0 +1,51 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+\viewkind4\uc1
+\pard\sa200\sl276\slmult1\f0\fs28\b RAPPORT DES PARAM\'c8TRES DU PROJET 2.5 (MODULE COMPL\'c9MENTAIRE DE PARATEXT)\b0\fs22\par
+\par
+\b BUT\b0\par
+Rapport des param\'e8tres du projet est un module compl\'e9mentaire de Paratext. Il affiche le fichier de param\'e8tres du projet (Settings.xml) dans une page de votre navigateur web. Pour chaque param\'e8tre, il donne sa valeur et une description de ce qu'il est. Il lit les fichiers du projet et le texte de ses livres, mais il ne modifie jamais le projet.\par
+Les param\'e8tres sont group\'e9s par th\'e8me : G\'e9n\'e9ral, Fichiers et encodage, Livres et versification, Polices et affichage, Param\'e8tres de langue, Caract\'e8res, Ponctuation, Guillemets, Majuscules, Marqueurs, Mots et liste de mots, Nombres, R\'e9f\'e9rences bibliques, Notes de bas de page et r\'e9f\'e9rences crois\'e9es, Termes bibliques et interlin\'e9aire, Bible d'\'e9tude et Publishing Assistant. Les messages enregistr\'e9s par les v\'e9rifications personnalis\'e9es et les param\'e8tres sans description connue ne sont pas affich\'e9s.\par
+\par
+\b INSTALLATION\b0\par
+1. T\'e9l\'e9chargez Install_Phils_tools.exe depuis le dossier Paratext_Plugins. Si le navigateur vous avertit au sujet du fichier, choisissez de le conserver.\par
+2. Fermez Paratext.\par
+3. Double-cliquez sur Install_Phils_tools.exe. Si Windows indique qu'il a prot\'e9g\'e9 votre ordinateur, cliquez sur \'ab Informations compl\'e9mentaires \'bb, puis sur \'ab Ex\'e9cuter quand m\'eame \'bb (l'installateur n'est pas encore sign\'e9).\par
+4. Cochez Rapport des param\'e8tres du projet et cliquez sur \'ab Installer / mettre \'e0 jour \'bb. Il s'installe dans chaque Paratext 9 de l'ordinateur. Si Windows demande l'autorisation, cliquez sur Oui. La m\'eame fen\'eatre met le module \'e0 jour plus tard (son statut indique alors \'ab Mise \'e0 jour disponible \'bb) ou le retire (\'ab Supprimer les coch\'e9s \'bb), et son bouton \'ab Guide de l'utilisateur \'bb ouvre ce guide.\par
+\par
+\b UTILISATION\b0\par
+1. Ouvrez le projet dans une fen\'eatre de texte biblique et choisissez Outils > Rapport des param\'e8tres du projet...\par
+2. Le rapport s'ouvre dans votre navigateur web. Il commence par le nom du projet, le chemin de son Settings.xml et un sommaire. Cliquez sur un th\'e8me pour y aller.\par
+3. Chaque ligne a trois colonnes : le nom du param\'e8tre dans Settings.xml, sa valeur et sa description.\par
+La page est enregistr\'e9e sous local\\ProjectSettings\\SettingsReport.html dans le dossier du projet (Envoyer/Recevoir ne partage pas le dossier local). Chaque nouveau rapport remplace le pr\'e9c\'e9dent. Vous pouvez l'imprimer ou l'enregistrer depuis le navigateur.\par
+\par
+\b PR\'c9SENTATION DES VALEURS\b0\par
+\tab Les param\'e8tres Oui/Non (enregistr\'e9s sous la forme T/F ou True/False) affichent Oui ou Non, avec le texte enregistr\'e9 en dessous.\par
+\tab Sous StyleSheet, la ligne \'ab Fichier custom.sty \'bb indique si le dossier du projet contient un custom.sty (les changements propres au projet \'e0 la feuille de style), avec sa taille et sa date. Sous Versification, \'ab Fichier custom.vrs \'bb fait de m\'eame pour custom.vrs, et \'e0 la fin de Fichiers et encodage, \'ab Fichier autocorrect.txt \'bb pour autocorrect.txt.\par
+\tab Les listes de livres (BooksPresent et d'autres, un 0 ou un 1 par livre) affichent les codes des livres et leur nombre. Pour BooksPresent, les livres de GEN \'e0 REV que le projet n'a pas sont list\'e9s en dessous, en rouge.\par
+\tab La versification, l'encodage, le code de la langue et le type de projet sont expliqu\'e9s (par exemple 4 = Anglaise, 65001 = UTF-8).\par
+\tab Les listes (caract\'e8res, ponctuation, marqueurs, mots) affichent une case par \'e9l\'e9ment. Les caract\'e8res invisibles et les espaces sp\'e9ciales apparaissent sous forme de petites \'e9tiquettes jaunes avec leur code, par exemple ZWJ U+200D ou NBSP U+00A0.\par
+\tab Les caract\'e8res difficiles \'e0 distinguer affichent leur valeur Unicode en dessous, en petits caract\'e8res bleus : apostrophes et coups de glotte (' \u700? \u-22644? \u8217?), guillemets, traits d'union et tirets (- \u8211? \u8212?), deux-points, signes diacritiques combinants et lettres cyrilliques ou grecques qui ressemblent \'e0 des latines (\u1093?, \u1086?, \u949?). Par exemple \u-22644? affiche U+A78C et ' affiche U+0027.\par
+\tab Dans les listes de ponctuation, _ marque une espace ou le bord d'un mot : _( = au d\'e9but d'un mot, )_ = \'e0 la fin, _-_ = entre des espaces, - = \'e0 l'int\'e9rieur d'un mot. Pointez un \'e9l\'e9ment avec la souris pour voir sa place.\par
+\tab Au d\'e9part, seuls les param\'e8tres qui ont une valeur sont list\'e9s. Cochez \'ab Afficher les param\'e8tres vides \'bb, au-dessus du sommaire, pour voir aussi les param\'e8tres vides, y compris les options de v\'e9rifications que Paratext enregistre sous la forme NullValue ; ils s'affichent (vide), avec le nom en jaune clair. Le haut de la page indique leur nombre.\par
+\tab Les noms des param\'e8tres qui contiennent des \'e9l\'e9ments non approuv\'e9s (non valides), comme InvalidCharacters, InvalidPunctuation ou NonRepeatableWords, ont un fond orange clair.\par
+\par
+\b CARACT\'c8RES UTILIS\'c9S DANS LE TEXTE\b0\par
+Le rapport lit le texte de tous les livres du projet comme le lisent les v\'e9rifications de Paratext (le texte publiable et les notes, sans les marqueurs, les appels de notes ni les num\'e9ros de versets) et compte combien de fois chaque caract\'e8re et chaque \'e9l\'e9ment de ponctuation appara\'eet. Le haut de la page indique combien de livres ont \'e9t\'e9 lus. Dans la section Caract\'e8res :\par
+\tab ValidCharacters n'affiche que les caract\'e8res approuv\'e9s qui apparaissent dans le texte, chacun avec un petit nombre : son nombre d'occurrences.\par
+\tab \'ab Approuv\'e9s mais non utilis\'e9s dans le texte \'bb, juste en dessous, liste les caract\'e8res approuv\'e9s qui n'apparaissent pas. Ils ont pu \'eatre approuv\'e9s par le pass\'e9 et ne plus faire partie du projet.\par
+\tab \'ab Caract\'e8res non approuv\'e9s pr\'e9sents dans le texte \'bb, sous InvalidCharacters (en orange), liste les caract\'e8res non approuv\'e9s qui apparaissent encore, avec leur nombre d'occurrences. Ce sont des erreurs \'e0 corriger dans le texte.\par
+Une combinaison de lettres comme ch est compt\'e9e partout o\'f9 elle appara\'eet, et une lettre seule est compt\'e9e partout, aussi \'e0 l'int\'e9rieur des combinaisons (le e de ie). L'ouverture du rapport peut prendre quelques secondes pendant la lecture des livres. Un signe diacritique combinant seul (par exemple un macron souscrit) n'est compt\'e9 que l\'e0 o\'f9 il n'est pas sur une lettre.\par
+Dans la section Ponctuation, la m\'eame chose est faite pour ValidPunctuation et InvalidPunctuation : seuls les \'e9l\'e9ments approuv\'e9s utilis\'e9s dans le texte, avec leur nombre, puis \'ab Approuv\'e9s mais non utilis\'e9s dans le texte \'bb et, sous InvalidPunctuation (en orange), \'ab Ponctuation non approuv\'e9e pr\'e9sente dans le texte \'bb. Les \'e9l\'e9ments sont form\'e9s exactement comme dans l'inventaire de ponctuation de Paratext : signes isol\'e9s avec ce qui les entoure (_( ._) ou s\'e9quences enti\'e8res (!\'bb_() quand la vue avanc\'e9e de l'inventaire est activ\'e9e.\par
+\par
+\b PARAM\'c8TRES DE LANGUE\b0\par
+La section Param\'e8tres de langue affiche les param\'e8tres de langue du projet (Projet > Param\'e8tres du projet > Param\'e8tres de langue...). Paratext les enregistre dans un fichier .ldml du dossier du projet, nomm\'e9 d'apr\'e8s le code de langue de Settings.xml (LanguageIsoCode) : par exemple rub.ldml pour rub:::, ou es-x-taller.ldml pour es:::x-taller. Un dossier de projet peut contenir plusieurs fichiers .ldml ; le rapport utilise celui qui correspond au code, affiche son nom \'e0 c\'f4t\'e9 du titre de la section et liste les autres. Si aucun ne correspond, la section l'indique.\par
+Elle montre les lettres de la langue, la liste des Caract\'e8res alphab\'e9tiques dans l'ordre alphab\'e9tique, la ponctuation, l'onglet Autres caract\'e8res (ponctuation \'e0 l'int\'e9rieur d'un mot, ordre des rappels des notes de bas de page et des renvois, caract\'e8res de segment de verset, signes diacritiques, caract\'e8res de coupure de mot), les paires de ponctuation, les guillemets, le sens de l'\'e9criture, les polices et les claviers. Chaque caract\'e8re est affich\'e9 dans une case.\par
+Sous ValidCharacters, dans la section Caract\'e8res, la ligne \'ab Caract\'e8res valides absents des param\'e8tres de langue \'bb liste les lettres (et combinaisons de lettres comme ch ou k\u700?) utilis\'e9es dans le texte que l'inventaire de caract\'e8res approuve mais qui manquent dans la liste des Caract\'e8res alphab\'e9tiques des param\'e8tres de langue. Une combinaison avec majuscule, comme Ch ou CH, compte comme pr\'e9sente quand ch figure dans la liste. S'il ne manque rien, la ligne l'indique. La ligne n'appara\'eet que si le projet a les deux listes.\par
+\par
+\b ORIGINE DES DESCRIPTIONS\b0\par
+Les param\'e8tres propres \'e0 Paratext sont d\'e9crits par le module, avec les noms des fen\'eatres de Paratext o\'f9 ils se r\'e8glent (Propri\'e9t\'e9s du projet, Param\'e8tres de langue, R\'e8gles des guillemets, Param\'e8tres de chiffres, Param\'e8tres des r\'e9f\'e9rences bibliques et les inventaires).\par
+Les v\'e9rifications personnalis\'e9es (CMS) enregistrent aussi leurs options dans Settings.xml. Le rapport ne les affiche pas : il les reconna\'eet gr\'e2ce aux fichiers .cms du dossier cms de votre dossier de projets Paratext. Une option d'une v\'e9rification qui n'est plus dans le dossier cms ne peut pas \'eatre reconnue ; elle n'est donc pas affich\'e9e non plus.\par
+\par
+\b MODIFIER LES PARAM\'c8TRES\b0\par
+Le rapport est en lecture seule. Pour modifier un param\'e8tre, utilisez Paratext : Projet > Param\'e8tres du projet > Propri\'e9t\'e9s du projet..., Param\'e8tres de langue..., R\'e8gles des guillemets..., Param\'e8tres de chiffres... ou Param\'e8tres des r\'e9f\'e9rences bibliques..., ou les inventaires de v\'e9rification.\par
+}

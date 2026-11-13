@@ -1,0 +1,5 @@
+C:\ClaudeCode Projects\Project_Settings\ProjectSettingsPlugin\bin\Release\ProjectSettingsPlugin.dll
+C:\ClaudeCode Projects\Project_Settings\ProjectSettingsPlugin\bin\Release\ProjectSettingsPlugin.pdb
+C:\ClaudeCode Projects\Project_Settings\ProjectSettingsPlugin\obj\Release\ProjectSettingsPlugin.csprojResolveAssemblyReference.cache
+C:\ClaudeCode Projects\Project_Settings\ProjectSettingsPlugin\obj\Release\ProjectSettingsPlugin.dll
+C:\ClaudeCode Projects\Project_Settings\ProjectSettingsPlugin\obj\Release\ProjectSettingsPlugin.pdb

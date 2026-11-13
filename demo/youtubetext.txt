@@ -1,0 +1,24 @@
+﻿Project Settings Report is a Paratext tool that shows all of a project's settings on one page in your web browser, each with a description in plain words. It also reads the language settings, and counts how often each approved character and punctuation mark occurs in the text, so you can see what is approved but never used, and what is disapproved but still in the text. It also shows the quotation marks, the number and Scripture reference settings, and the settings of the inventories. The report only shows the settings; you change them in Paratext.
+
+Download Install_Phils_tools.exe from the Paratext Plugins folder, and tick Project Settings Report in it:
+https://short.do/HgUb7T
+
+0:17 How do I open Project Settings Report?
+0:25 What is at the top of the report?
+0:45 What does each row show?
+1:02 Where are the settings that have no value?
+1:14 What do the yellow names mean?
+1:20 Does the report show the language settings?
+1:35 How often is each character used?
+1:49 Which disapproved characters are still in the text?
+2:06 Which books and files does the project have?
+2:23 Does the report show the quotation marks?
+2:32 What other settings does the report show?
+2:46 Where is the report saved?
+3:06 How do I install the tool?
+
+Created with Claude AI.
+Narration: AI-generated voice (Microsoft Azure AI Speech, voice "Jenny").
+Music from Free To Use
+Source: https://freetouse.com/music
+Coconut Kind of Love by Aetheric

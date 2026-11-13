@@ -1,0 +1,51 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+\viewkind4\uc1
+\pard\sa200\sl276\slmult1\f0\fs28\b INFORME DE LA CONFIGURACI\'d3N DEL PROYECTO 2.5 (COMPLEMENTO DE PARATEXT)\b0\fs22\par
+\par
+\b PROP\'d3SITO\b0\par
+Informe de la configuraci\'f3n del proyecto es un complemento de Paratext. Muestra el archivo de configuraci\'f3n del proyecto (Settings.xml) como una p\'e1gina en su navegador web. Para cada valor da su contenido y una descripci\'f3n de lo que es. Lee los archivos del proyecto y el texto de sus libros, pero nunca cambia el proyecto.\par
+Los valores se agrupan por tema: General, Archivos y codificaci\'f3n, Libros y versificaci\'f3n, Fuentes y visualizaci\'f3n, Configuraci\'f3n del idioma, Caracteres, Puntuaci\'f3n, Comillas, May\'fasculas, Marcadores, Palabras y lista de palabras, N\'fameros, Referencias b\'edblicas, Notas al pie y referencias cruzadas, Vocablos b\'edblicos e interlineal, Biblia de estudio y Publishing Assistant. No se muestran los mensajes que guardan las verificaciones personalizadas ni los valores sin descripci\'f3n conocida.\par
+\par
+\b INSTALACI\'d3N\b0\par
+1. Descargue Install_Phils_tools.exe de la carpeta Paratext_Plugins. Si el navegador le advierte sobre el archivo, elija conservarlo.\par
+2. Cierre Paratext.\par
+3. Haga doble clic en Install_Phils_tools.exe. Si Windows dice que protegi\'f3 su PC, haga clic en "M\'e1s informaci\'f3n" y luego en "Ejecutar de todas formas" (el instalador todav\'eda no est\'e1 firmado).\par
+4. Marque Informe de la configuraci\'f3n del proyecto y haga clic en "Instalar / actualizar los marcados". Se instala en cada Paratext 9 del equipo. Si Windows le pide permiso, haga clic en S\'ed. La misma ventana actualiza el complemento m\'e1s adelante (su estado dice entonces "Actualizaci\'f3n disponible") o lo quita ("Quitar los marcados"), y su bot\'f3n "Gu\'eda del usuario" abre esta gu\'eda.\par
+\par
+\b USO\b0\par
+1. Abra el proyecto en una ventana de Escritura y elija Herramientas > Informe de la configuraci\'f3n del proyecto...\par
+2. El informe se abre en su navegador web. Empieza con el nombre del proyecto, la ruta de su Settings.xml y un \'edndice. Haga clic en un tema para ir a \'e9l.\par
+3. Cada fila tiene tres columnas: el nombre del valor en Settings.xml, su contenido y su descripci\'f3n.\par
+La p\'e1gina se guarda como local\\ProjectSettings\\SettingsReport.html en la carpeta del proyecto (Enviar/Recibir no comparte la carpeta local). Cada nuevo informe reemplaza al anterior. Puede imprimirlo o guardarlo desde el navegador.\par
+\par
+\b C\'d3MO SE MUESTRAN LOS VALORES\b0\par
+\tab Los valores S\'ed/No (guardados como T/F o True/False) muestran S\'ed o No, con el texto guardado debajo.\par
+\tab Debajo de StyleSheet, la fila "Archivo custom.sty" indica si la carpeta del proyecto tiene un custom.sty (los cambios propios del proyecto a la hoja de estilo), con su tama\'f1o y fecha. Debajo de Versification, "Archivo custom.vrs" hace lo mismo para custom.vrs, y al final de Archivos y codificaci\'f3n, "Archivo autocorrect.txt" para autocorrect.txt.\par
+\tab Las listas de libros (BooksPresent y otras, un 0 o un 1 por libro) muestran los c\'f3digos de los libros y cu\'e1ntos son. Para BooksPresent, debajo se indican en rojo los libros de GEN a REV que el proyecto no tiene.\par
+\tab La versificaci\'f3n, la codificaci\'f3n, el c\'f3digo del idioma y el tipo de proyecto se explican (por ejemplo 4 = Inglesa, 65001 = UTF-8).\par
+\tab Las listas (caracteres, puntuaci\'f3n, marcadores, palabras) muestran un recuadro por elemento. Los caracteres invisibles y los espacios especiales aparecen como peque\'f1as etiquetas amarillas con su c\'f3digo, por ejemplo ZWJ U+200D o NBSP U+00A0.\par
+\tab Los caracteres dif\'edciles de distinguir muestran su valor Unicode debajo, en letra azul peque\'f1a: ap\'f3strofos y oclusivas glotales (' \u700? \u-22644? \u8217?), comillas, guiones y rayas (- \u8211? \u8212?), dos puntos, marcas combinadas y letras cir\'edlicas o griegas que parecen latinas (\u1093?, \u1086?, \u949?). Por ejemplo \u-22644? muestra U+A78C y ' muestra U+0027.\par
+\tab En las listas de puntuaci\'f3n, _ indica un espacio o el borde de una palabra: _( = al principio de una palabra, )_ = al final, _-_ = entre espacios, - = dentro de una palabra. Se\'f1ale un elemento con el rat\'f3n para ver su posici\'f3n.\par
+\tab Al principio solo se muestran los valores que tienen contenido. Marque "Mostrar los valores vac\'edos", encima del \'edndice, para ver tambi\'e9n los vac\'edos, incluidas las opciones de verificaciones que Paratext guarda como NullValue; aparecen como (vac\'edo), con el nombre en amarillo claro. El principio de la p\'e1gina indica cu\'e1ntos son.\par
+\tab Los nombres de los valores que contienen elementos no aprobados (no v\'e1lidos), como InvalidCharacters, InvalidPunctuation o NonRepeatableWords, tienen un fondo naranja claro.\par
+\par
+\b CARACTERES USADOS EN EL TEXTO\b0\par
+El informe lee el texto de todos los libros del proyecto como lo leen las verificaciones de Paratext (el texto publicable y las notas, sin los marcadores, las llamadas de notas ni los n\'fameros de vers\'edculo) y cuenta cu\'e1ntas veces aparece cada car\'e1cter y cada elemento de puntuaci\'f3n. El principio de la p\'e1gina indica cu\'e1ntos libros se leyeron. En la secci\'f3n Caracteres:\par
+\tab ValidCharacters muestra solo los caracteres aprobados que aparecen en el texto, cada uno con un n\'famero peque\'f1o: cu\'e1ntas veces aparece.\par
+\tab "Aprobados pero no usados en el texto", justo debajo, enumera los caracteres aprobados que no aparecen. Puede que se aprobaran en el pasado y ya no formen parte del proyecto.\par
+\tab "Caracteres no aprobados que aparecen en el texto", debajo de InvalidCharacters (en naranja), enumera los caracteres no aprobados que todav\'eda aparecen, con cu\'e1ntas veces. Son errores que hay que corregir en el texto.\par
+Una combinaci\'f3n de letras como ch se cuenta dondequiera que aparezca, y una letra sola se cuenta en todas partes, tambi\'e9n dentro de combinaciones (la e de ie). Una marca combinada sola (por ejemplo un macr\'f3n debajo) solo se cuenta donde no est\'e1 sobre una letra. Abrir el informe puede tardar unos segundos mientras se leen los libros.\par
+En la secci\'f3n Puntuaci\'f3n se hace lo mismo con ValidPunctuation e InvalidPunctuation: solo los elementos aprobados que se usan en el texto, con cu\'e1ntas veces, luego "Aprobados pero no usados en el texto" y, debajo de InvalidPunctuation (en naranja), "Puntuaci\'f3n no aprobada que aparece en el texto". Los elementos se forman exactamente como en el inventario de puntuaci\'f3n de Paratext: signos sueltos con lo que tienen alrededor (_( ._) o secuencias enteras (!\'bb_() cuando est\'e1 activada la vista avanzada del inventario.\par
+\par
+\b CONFIGURACI\'d3N DEL IDIOMA\b0\par
+La secci\'f3n Configuraci\'f3n del idioma muestra la configuraci\'f3n del idioma del proyecto (Proyecto > Configuraci\'f3n del proyecto > Configuraci\'f3n del idioma...). Paratext la guarda en un archivo .ldml de la carpeta del proyecto, cuyo nombre viene del c\'f3digo de idioma de Settings.xml (LanguageIsoCode): por ejemplo rub.ldml para rub:::, o es-x-taller.ldml para es:::x-taller. Una carpeta de proyecto puede tener varios archivos .ldml; el informe usa el que coincide con el c\'f3digo, muestra su nombre junto al t\'edtulo de la secci\'f3n y enumera los dem\'e1s. Si ninguno coincide, la secci\'f3n lo indica.\par
+Muestra las letras del idioma, la lista de Caracteres alfab\'e9ticos en orden alfab\'e9tico, la puntuaci\'f3n, la pesta\'f1a Otros caracteres (puntuaci\'f3n en medio de palabra, secuencias de llamadores de notas al pie y de referencias cruzadas, caracteres del segmento de vers\'edculo, diacr\'edticos, caracteres de separaci\'f3n de palabras), los pares de puntuaci\'f3n, las comillas, la direcci\'f3n de la escritura, las fuentes y los teclados. Cada car\'e1cter se muestra en un recuadro.\par
+Debajo de ValidCharacters, en la secci\'f3n Caracteres, la fila "Caracteres v\'e1lidos que no est\'e1n en la configuraci\'f3n del idioma" enumera las letras (y combinaciones de letras como ch o k\u700?) usadas en el texto que el inventario de caracteres aprueba pero que faltan en la lista de Caracteres alfab\'e9ticos de la configuraci\'f3n del idioma. Una combinaci\'f3n con may\'fascula, como Ch o CH, cuenta como incluida cuando ch est\'e1 en la lista. Si no falta nada, la fila lo indica. La fila aparece solo cuando el proyecto tiene las dos listas.\par
+\par
+\b DE D\'d3NDE VIENEN LAS DESCRIPCIONES\b0\par
+El complemento describe los valores propios de Paratext, usando los nombres de las ventanas de Paratext donde se definen (Propiedades del proyecto, Configuraci\'f3n del idioma, Reglas de comillas, Configuraci\'f3n de n\'fameros, Configuraci\'f3n de referencias b\'edblicas y los inventarios).\par
+Las verificaciones personalizadas (CMS) tambi\'e9n guardan sus opciones en Settings.xml. El informe no las muestra: las reconoce por los archivos .cms de la carpeta cms de su carpeta de proyectos de Paratext. Una opci\'f3n de una verificaci\'f3n que ya no est\'e1 en la carpeta cms no se puede reconocer, as\'ed que tampoco se muestra.\par
+\par
+\b CAMBIAR LA CONFIGURACI\'d3N\b0\par
+El informe es solo de lectura. Para cambiar un valor, use Paratext: Proyecto > Configuraci\'f3n del proyecto > Propiedades del proyecto..., Configuraci\'f3n del idioma..., Reglas de comillas..., Configuraci\'f3n de n\'fameros... o Configuraci\'f3n de referencias b\'edblicas..., o los inventarios de verificaci\'f3n.\par
+}

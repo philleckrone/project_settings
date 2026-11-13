@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+          Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!-- Test host only: never deployed. Builds the plugin's Paratext-free sources into an exe. -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ProjectSettingsTests</RootNamespace>
+    <AssemblyName>ProjectSettingsTestHost</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>5</LangVersion>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\ProjectSettingsPlugin\CharacterUsage.cs">
+      <Link>CharacterUsage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\CmsOptions.cs">
+      <Link>CmsOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\LookAlikes.cs">
+      <Link>LookAlikes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\PunctuationUsage.cs">
+      <Link>PunctuationUsage.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\StyleSheets.cs">
+      <Link>StyleSheets.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\UsfmTextTokens.cs">
+      <Link>UsfmTextTokens.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\HtmlReport.cs">
+      <Link>HtmlReport.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\LdmlFile.cs">
+      <Link>LdmlFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\ReportWriter.cs">
+      <Link>ReportWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\SettingCatalog.cs">
+      <Link>SettingCatalog.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\SettingsFile.cs">
+      <Link>SettingsFile.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\Strings.cs">
+      <Link>Strings.cs</Link>
+    </Compile>
+    <Compile Include="..\..\ProjectSettingsPlugin\ValueFormatter.cs">
+      <Link>ValueFormatter.cs</Link>
+    </Compile>
+    <Compile Include="FolderBooks.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\ProjectSettingsPlugin\Resources\settings.txt">
+      <LogicalName>ProjectSettings.settings.txt</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\ProjectSettingsPlugin\Resources\usfm.sty">
+      <LogicalName>ProjectSettings.usfm.sty</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
